@@ -2,30 +2,19 @@ require 'pry'
 require 'facets'
 
 def kinda_like?(fuzzy_word, exact_word)
-  if end_letters_not_jumbled(fuzzy_word, exact_word) &&
+  end_letters_not_jumbled(fuzzy_word, exact_word) &&
   	(is_exact_match(fuzzy_word, exact_word) ||
   	at_most_one_letter_different(fuzzy_word, exact_word) )
-  	
-
-  	true
-  else
-  	false
-  end
 end
 
 def is_exact_match(fuzzy_word, exact_word)
 	regex = Regexp.new(fuzzy_word)
-	if !exact_word.match(regex).nil?
-		true
-	else
-		false
-	end
+	!exact_word.match(regex).nil?
 end
 
 def at_most_one_letter_different(fuzzy_word, exact_word)
 	extra_fuzzies = fuzzy_word.split(//).frequency - exact_word.split(//).frequency
 	extra_exacts = exact_word.split(//).frequency - fuzzy_word.split(//).frequency
-	
 	extra_fuzzies.size < 2 && extra_exacts.size < 2
 end
 

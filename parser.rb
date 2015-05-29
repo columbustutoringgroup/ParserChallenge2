@@ -34,6 +34,7 @@ def jumbled(w1,w2)
 end
 
 
+
 # p fouls("cawffee", "coffee")  
 # p fouls("bog", "dog")
 p kinda_like?("doge", "dog") == true

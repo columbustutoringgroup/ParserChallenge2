@@ -20,7 +20,3 @@ end
 def ends_jumbled?(fuzzy_word, exact_word)
   fuzzy_word[0] == exact_word[-1] and fuzzy_word[-1] == exact_word[0]
 end
-
-# dejumble the middle first
-# then compare differences
-# if differences is more than

@@ -5,9 +5,13 @@ def kinda_like?(fuzzy_word, exact_word)
   # breaking the method up into pieces is encouraged
 end
 
-#def another_private_method
-#end
+private
 
-#def some_private_method
-#end
+def letter_differences(fuzzy_word, exact_word)
+
+end
+
+def jumble_type
+
+end
 

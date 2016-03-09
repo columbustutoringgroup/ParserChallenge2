@@ -15,6 +15,8 @@ def kinda_like?(fuzzy_word, exact_word)
   end
 end
 
+private
+
 def flipped_ends?(fuzzy_word, exact_word)
   fuzzy_word[0] == exact_word.reverse[0] &&
     fuzzy_word.reverse[0] == exact_word[0]
